@@ -1,7 +1,7 @@
 ---
 title: functions
 metaTitle: Creating an SVG path drawing animation.
-metaDesc: Creating my logo animation using SVG and Greensock
+metaDesc: Creating my logo animation using SVG and GreenSock
 socialImage: /images/meta.jpg
 date: '2019-07-30'
 eleventyExcludeFromCollections: true

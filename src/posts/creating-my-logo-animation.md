@@ -1,7 +1,7 @@
 ---
 title: Creating my logo animation
 metaTitle: Creating an SVG path drawing animation.
-metaDesc: Creating my logo animation using SVG and Greensock
+metaDesc: Creating my logo animation using SVG and GreenSock
 socialImage: /images/meta.jpg
 image: /images/cassie.png
 alt: "Cassie's logo"
@@ -19,23 +19,23 @@ There's a few things going on in this logo animation. We've got -
 
 - SVG stroke animation [jump to section >](#heading-svg-stroke-dasharray)
 - SVG Clip-path [jump to section >](#heading-svg-lessclippathgreater)
-- [Greensock](https://greensock.com/) for the animation
-- Greensock's [Custom Bounce](https://greensock.com/wiggle-bounce), and [Draw SVG](https://greensock.com/drawSVG) plugins
+- [GreenSock](https://greensock.com/) for the animation
+- GreenSock's [Custom Bounce](https://greensock.com/wiggle-bounce), and [Draw SVG](https://greensock.com/drawSVG) plugins
 - and a _whole_ load of drawing stuff out in illustrator.
 
 ---
 
-I won't dive too much into Greensock for this article. But as [Sara Soueidan](https://twitter.com/SaraSoueidan) has said
+I won't dive too much into GreenSock for this article. But as [Sara Soueidan](https://twitter.com/SaraSoueidan) has said
 
-> Greensock is the best thing that happened to SVG animations since SVG animations.
+> GreenSock is the best thing that happened to SVG animations since SVG animations.
 
-Greensock provides better cross browser support for SVG animation than we get with CSS. It also, crucially, gives you the ability to chain animations and group animations on timelines. This is invaluable for longer and more complex animation.
+GreenSock provides better cross browser support for SVG animation than we get with CSS. It also, crucially, gives you the ability to chain animations and group animations on timelines. This is invaluable for longer and more complex animation.
 
 They also have a bunch of fun plugins, some of which have been made specifically for SVG, like [Draw SVG](https://greensock.com/drawSVG) and [Morph SVG](https://greensock.com/morphSVG).
 
 I've been side-eying their custom bounce plugin for a while, so when I saw an chance to use it to give the little dot some character I jumped (bounced? 😬) at the chance.
 
-Although I love Greensock, you don't need to learn a whole Javascript animation library to do SVG path animations.
+Although I love GreenSock, you don't need to learn a whole Javascript animation library to do SVG path animations.
 
 We can do them with CSS too. So I'll run through a couple of different ways to create the same effect.
 
@@ -95,7 +95,7 @@ Up until now we've been changing the value using a range input, but dashoffset a
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-We can also use Greensock's [draw svg plugin](https://greensock.com/drawSVG) to animate the stroke.
+We can also use GreenSock's [draw svg plugin](https://greensock.com/drawSVG) to animate the stroke.
 
 <p class="codepen" data-height="265" data-theme-id="0" data-default-tab="js,result" data-user="cassie-codes" data-slug-hash="6d0d3360d5801575db3f47e957fe2c67" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="SVG stroke dashoffset demo - animated with GSAP">
   <span>See the Pen <a href="https://codepen.io/cassie-codes/pen/6d0d3360d5801575db3f47e957fe2c67/">
@@ -114,7 +114,7 @@ Under the hood, this is how my logo animation works, but rather than having one 
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 Chaining animations in CSS is a bit of a nightmare as we have to do it with `animation-delay`.
-With Greensock, you can line these animations (or tweens) up on a timeline and easily tweak the timings of each tween in relation to the others.
+With GreenSock, you can line these animations (or tweens) up on a timeline and easily tweak the timings of each tween in relation to the others.
 
 You may have noticed that this version of my logo looks a little... messy though? SVG paths are a consistant width the whole way along. We can change the overall `stroke-width` and the shape of the `stroke-linecap` but we can't do much more than that.
 
@@ -224,7 +224,7 @@ The final cherry on top is the little dot on the i. 💚
 
 In order to make a realistic bounce, the element needs to abide by the [squash and stretch](https://blog.animationmentor.com/squash-and-stretch-the-12-basic-principles-of-animation/) animation principle.
 
-This helps make the movement feel more lifelike. The i should squash and stick to the ground at the bottom of the bounce and stretch out at the top. You can definitely achieve this with some really fine tuned keyframes or individual, overlapping tweens. But Greensock make it easier for us with their [Custom Bounce](https://greensock.com/wiggle-bounce) plugin.
+This helps make the movement feel more lifelike. The i should squash and stick to the ground at the bottom of the bounce and stretch out at the top. You can definitely achieve this with some really fine tuned keyframes or individual, overlapping tweens. But GreenSock make it easier for us with their [Custom Bounce](https://greensock.com/wiggle-bounce) plugin.
 
 Using the plugin you set a few parameters and it creates an ease for the bounce and for the squash and stretch.
 
@@ -234,7 +234,7 @@ Using the plugin you set a few parameters and it creates an ease for the bounce 
 CustomBounce.create('myBounce', {strength: 0.7, squash: 3, squashID: 'myBounce-squash'});
 ```
 
-You can then use that bounce ease the same way you would use a normal ease in a Greensock tween, by referring to it in your tween parameters.
+You can then use that bounce ease the same way you would use a normal ease in a GreenSock tween, by referring to it in your tween parameters.
 The squash ease ID will be whatever the ID of the bounce is plus `-squash` appended to the end, for example, `ease:"myBounce-squash"`
 
 ```js

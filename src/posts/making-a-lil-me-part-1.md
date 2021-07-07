@@ -34,13 +34,13 @@ If you're the kind of person who learns best by digging into the code, then just
 
 Still here? 😊 Cool beans, let's go through it together.
 
-I use [Greensock](https://greensock.com/) for all my SVG animation. There are a few reasons for this. Firstly, it gives you more control and is super fun to use. But more importantly, as browsers implement the SVG spec differently, animating can get a bit messy. The team at Greensock put a lot of effort into harmonizing behavior across browsers.
+I use [GreenSock](https://greensock.com/) for all my SVG animation. There are a few reasons for this. Firstly, it gives you more control and is super fun to use. But more importantly, as browsers implement the SVG spec differently, animating can get a bit messy. The team at GreenSock put a lot of effort into harmonizing behavior across browsers.
 
-Under the hood though, Greensock is just a really performant property manipulator. It will manipulate (pretty much) whatever value you want to change. In this case it's updating the values in a matrix transform. Check this out.
+Under the hood though, GreenSock is just a really performant property manipulator. It will manipulate (pretty much) whatever value you want to change. In this case it's updating the values in a matrix transform. Check this out.
 
 ![gif of matrix transforms updating with dev tools open](/images/cursor.gif)
 
-Cool right! Greensock is great at this kind of thing, but there's a lot going on in this pen, so let's break it down into chunks and focus on one bit at a time. First up, the mouse interaction. We'll come back to Greensock in a bit!
+Cool right! GreenSock is great at this kind of thing, but there's a lot going on in this pen, so let's break it down into chunks and focus on one bit at a time. First up, the mouse interaction. We'll come back to GreenSock in a bit!
 
 ## Mouse movement fun!
 
@@ -55,7 +55,7 @@ So, there's another way we can modify values in CSS with Javascript. [CSS custom
 
 Let's walk through the process. The goal is to get the x and y position of the cursor as we move our mouse about, and then we can use those values to update some custom properties.
 
-In the previous gif Greensock is using matrix transforms, which are more performant. But we're going to use `transform: translate(x,y)` for this as it's a tad more readable, and we can use percentage values.
+In the previous gif GreenSock is using matrix transforms, which are more performant. But we're going to use `transform: translate(x,y)` for this as it's a tad more readable, and we can use percentage values.
 
 First up, we declare some custom properties for the x and y values and then use those custom properties in place of regular property values in our transform.
 
@@ -214,9 +214,9 @@ if (!safeToAnimate) return;
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-## What about Greensock?!
+## What about GreenSock?!
 
-Let's see how we can do the same thing using Greensock!
+Let's see how we can do the same thing using GreenSock!
 First we have to include the core library, if you're on codepen, you can go to your pen settings and search for greensock.
 
 ![pen settings on codepen](/images/gsap-include.png)
@@ -235,7 +235,7 @@ function movePointer() {
 gsap.ticker.add(movePointer);
 ```
 
-Aside from making structuring animation itself more intuitive, Greensock provides a load of super cool utility functions that make your life easier.
+Aside from making structuring animation itself more intuitive, GreenSock provides a load of super cool utility functions that make your life easier.
 Remember all that work we did to get a nice usable range? Chuck that all in the bin. Look what we can do now!
 
 ```js
@@ -266,12 +266,12 @@ window.addEventListener('mousemove', updateMouseCoords);
 
 So tidy and concise!
 
-Instead of updating CSS custom properties, we're going to use a Greensock tween.
+Instead of updating CSS custom properties, we're going to use a GreenSock tween.
 A Tween is what does all the animation work, as I said at the start, it's like a high-performance property manipulator.
 
 A tween takes in two parameters
 
-The targets, which are the object(s) whose properties you want to animate. Greensock uses `document.querySelectorAll()` internally so we can use any CSS selector we would use in CSS, or a direct reference to an element.
+The targets, which are the object(s) whose properties you want to animate. GreenSock uses `document.querySelectorAll()` internally so we can use any CSS selector we would use in CSS, or a direct reference to an element.
 
 And the vars, an object containing all the properties/values you want to animate, along with any special properties like delay, ease, or duration.
 

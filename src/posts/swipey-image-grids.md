@@ -149,7 +149,7 @@ When we change the position of the `<rect>` within the clip path our image 'swip
 
 ## The final animation
 
-I use [Greensock](https://greensock.com/) for most of my animation because it makes sequencing animations a breeze and when working with SVG, I know I can rely on the transforms working consistently cross browser. But this is a nice short animation, so if you wanted you could certainly do this with CSS instead.
+I use [GreenSock](https://greensock.com/) for most of my animation because it makes sequencing animations a breeze and when working with SVG, I know I can rely on the transforms working consistently cross browser. But this is a nice short animation, so if you wanted you could certainly do this with CSS instead.
 
 Here's the final codepen if you want to dig into it!
 

@@ -60,9 +60,9 @@
 		</div>
 
 		{% if upcoming.length %}
-			<div class="[ wrapper ] [ pad-after ]">
+			<div class="[ wrapper wrapper-lg ] [ pad-after ]">
 				<div class="[ Workshop__events ] [ sf-flow ]">
-					<h2 class="[ h4 ]">Upcoming</h2>
+					<h2 class="[ h4 ]">Schedule</h2>
 
 					<ol class="[ Events ]" reversed="reversed">
 						{% for event in upcoming %}
@@ -73,7 +73,7 @@
 			</div>
 
 		{% endif %}
-		<div class="[ wrapper ] [ pad-after-lg ]">
+		{# <div class="[ wrapper ] [ pad-after-lg ]">
 			<div class="[ Workshop__events ] [ sf-flow ]">
 				<h2 class="[ h4 ]">Past workshops</h2>
 
@@ -83,7 +83,7 @@
 					{% endfor %}
 				</ol>
 			</div>
-		</div>
+		</div> #}
 
 		<div class="[ Workshop__feedback ] [ wrapper ] [ sf-flow ]">
 			<h2 class="[ h4 ]">People have said very nice things 🥺</h2>

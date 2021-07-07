@@ -1,6 +1,10 @@
 <li class="[ Events__item ] [ sf-flow ]">
 	<h3 class="[ h6 ]">
+		{% if event.link %}
 		<a href="{{ event.link }}" class="[ Events__link ]" rel="bookmark">{{event.title}}</a>
+		{% else %}
+		{{event.title}}
+		{% endif %}
 	</h3>
 	<p class="[ Events__row ] [ small ]">
 		<svg class="[ Events__svg ]" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 75.46 73.95">
@@ -26,8 +30,21 @@
 				<circle cx="44.75" cy="44.13" r="2.4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="4"/>
 			</svg>
 			<span>{{ event.time }}</span>
+			</p>
 		{% endif %}
-	</p>
+
+		{% if event.timezone %}
+		<p class="[ Events__row ] [ small ]">
+			<svg class="[ Events__svg ]" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 94.35 88.69">
+				<path d="M82.55 51.13a38.59 38.59 0 11.4-10.8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="4"/>
+				<polyline points="61.95 53.03 44.75 44.13 44.75 12.83" fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="4"/>
+				<polyline points="75.45 33.63 83.25 41.03 89.45 32.93" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+				<circle cx="44.75" cy="44.13" r="2.4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="4"/>
+			</svg>
+			<span>17:00 - 19:30 BST <a class="[ Events__link ]" href="{{ event.timezone }}"> local time? </a></span>
+			</p>
+		{% endif %}
+
 	<p class="[ Events__row ] [ small ]">
 		<svg class="[ Events__svg ]" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 75.46 73.95">
 			<g stroke="currentColor" fill="currentColor" stroke-miterlimit="10" stroke-width=".75">

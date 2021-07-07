@@ -57,7 +57,7 @@ This is the cool thing about SVG, unlike JPG's or PNG's you can get inside an SV
 ![a gif of an SVG DOM being traversed](/images/gifme.gif)
 <small>Hey look. I have a fringe now.<small>
 
-We'll animate the SVG elements in the same way we did the pointer. Using a [Greensock tween](https://greensock.com/docs/v3/GSAP/Tween). (We could use CSS variables as we did in part 1.)
+We'll animate the SVG elements in the same way we did the pointer. Using a [GreenSock tween](https://greensock.com/docs/v3/GSAP/Tween). (We could use CSS variables as we did in part 1.)
 
 Whether you use CSS or JS for the animation - The trick to 'fake' 3D movement is to create an illusion of perspective by moving the parts of the face in the background slightly less than the bits in the foreground.
 

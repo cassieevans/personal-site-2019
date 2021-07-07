@@ -6,8 +6,8 @@ description: "<p>SVG animation is a brilliant way to bring personality and chara
 <p>Check out the <strong>amazing</strong> things past attendees made in this <a href='https://codepen.io/collection/Xvbjpy'>codepen collection</a></p>
 "
 
-subContent: "<h2 class='h5'>What will you learn?</h2>
-<ul><li>How to use motion design principles to improve your animations.</li><li>How best to structure and optimize your SVG for <strong>performance and accessibility</strong>.</li><li>Unlocking SVG’s superpowers — <strong>clipping, masking</strong> and <strong>filters</strong>.</li><li>How to <strong>animate SVG with CSS</strong> and the gotcha’s to be aware of.</li><li>Utilizing a <strong>JavaScript animation library</strong> for more complex animations — <a href='https://greensock.com/'>Greensock</a>.</li><li>Creating animation with personality — choosing the right <strong>ease and timing</strong>.</li><li>Planning out and structuring your animation.</li><li>Achieving effects like stroke animation and morphing with Greensock’s plugins.</li><li><strong>Debugging</strong> your animations &amp; avoiding common pitfalls.</li><li>How to use your new powers responsibly — respecting user preferences.</li></ul>"
+subContent: "<h2 class='h5'>What you'll learn.</h2>
+<ul><li>How to use motion design principles to improve your animations.</li><li>How best to structure and optimize your SVG for <strong>performance and accessibility</strong>.</li><li>Unlocking SVG’s superpowers — <strong>clipping, masking</strong> and <strong>filters</strong>.</li><li>How to <strong>animate SVG with CSS</strong> and the gotcha’s to be aware of.</li><li>Utilizing a <strong>JavaScript animation library</strong> for more complex animations — <a href='https://greensock.com/'>GreenSock</a>.</li><li>Creating animation with personality — choosing the right <strong>ease and timing</strong>.</li><li>Planning out and structuring your animation.</li><li>Achieving effects like stroke animation and morphing with GreenSock’s plugins.</li><li><strong>Debugging</strong> your animations &amp; avoiding common pitfalls.</li><li>How to use your new powers responsibly — respecting user preferences.</li></ul>"
 type: workshop
 cta: "https://www.plandonline.com/cassie-booking"
 ctaText: "Join us this September!"
@@ -16,11 +16,26 @@ tweets: true
 video: 'https://player.vimeo.com/video/572263575'
 imageCaption: Stickers!
 upcoming:
-  - title: SVG animation workshop
-    link: 'https://www.plandonline.com/cassie-evans'
+  - title: Intro to SVG 
     date: "2021-09-02 17:00:00"
-    endDate: "2021-09-16 17:00:00"
-    location: Pland online
+    location: online
+    timezone: 'https://everytimezone.com/s/32d757bb'
+  - title: SVG's superpowers 
+    date: "2021-09-03 17:00:00"
+    location: online
+    timezone: 'https://everytimezone.com/s/9972d5e9'
+  - title: Intro to animation 
+    date: "2021-09-09 17:00:00"
+    location: online
+    timezone: 'https://everytimezone.com/s/4a5cec5b'
+  - title: Advanced animation 
+    date: "2021-09-10 17:00:00"
+    location: online
+    timezone: 'https://everytimezone.com/s/255edbc5'
+  - title: Bonus tips & tricks 
+    date: "2021-09-16 17:00:00"
+    location: online
+    timezone: 'https://everytimezone.com/s/2f35ce3e'
 events:
   - title: SVG animation masterclass
     link: 'https://smashingconf.com/online-workshops/workshops/cassie-evans-feb'
