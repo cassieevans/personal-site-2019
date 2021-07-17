@@ -20,6 +20,10 @@ permalink: /tags/{{ tag }}/
 
 {# Intro content #}
 {% set introHeading %}Posts tagged - “{{ tag }}”{% endset %}
+{% if 'notes' == tag %}
+{% set introHeading %}Notes and useful snippets{% endset %}
+{% endif %}
+
 {% set introHeadingLevel = '2' %}
 
 {# Post list content #}

@@ -131,6 +131,13 @@
       }
     }
 
+    // problem for future cassie - solving problem in 11ty client side data
+    pre.language-json {
+      &:after {
+        content: 'data.html';
+      }
+    }
+
     blockquote {
       border-left: 0.4rem solid var(--color-mint);
       margin-left: 0;
